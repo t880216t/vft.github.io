@@ -798,12 +798,6 @@ $ docker build -t vft_docker:latest .
 $ python run.py
 </pre></div>
 默认是5001端口，可以在server/run.py中自已改下。</p>
-<details class="note"><summary>线上部署建议用gunicorn</summary><div class="codehilite"><pre><span></span>$ <span class="nb">source</span> server/venv/bin/activate
-$ pip install gunicorn -i https://pypi.tuna.tsinghua.edu.cn/simple
-$ gunicorn -w <span class="m">4</span> -b <span class="m">127</span>.0.0.1:5001 run:app
-</pre></div>
-
-</details>
 <h3 id="nginx">配置Nginx反向代理<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h3>
 <p><div class="codehilite"><pre><span></span>server <span class="o">{</span>
   listen       <span class="m">80</span><span class="p">;</span> <span class="c1"># 端口根据自已的需要自定义</span>
